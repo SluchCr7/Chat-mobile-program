@@ -98,7 +98,7 @@ body{
     height: 80%;
 }
 .Mobile_chat__top_body__txt , .Mobile_chat__top_body__txt_right , .Mobile_Price_chat{
-    background-color: var(--Pale-Violet);
+    background-color: var(--Very-Light-Magenta);
     padding: 10px;
     border-radius: 1rem;
     font-size: .9rem;
@@ -140,6 +140,7 @@ body{
     flex-direction: row;
     align-items: center;
     padding: 12px 15px;
+    border: 1px solid transparent;
 }
 .comment input{
     width: 100%;
