@@ -1,0 +1,201 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Kumbh+Sans:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+:root{
+--Pale-Violet : hsl(276, 100%, 81%) ; /*(sub-heading at the top of the app UI)*/
+--Moderate-Violet : hsl(276, 55%, 52%) ;/*(chat on the left)*/
+--Desaturated-Dark-Violet : hsl(271, 15%, 43%); /*(chat on the right)*/
+--Grayish-Blue : hsl(206, 6%, 79%) ;/*(placeholder text)*/
+--Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%); /* (main heading)*/
+--Dark-Grayish-Violet-paragraph: hsl(270, 7%, 64%);
+
+/* #### Gradients */
+
+/* These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient: */
+
+--Light-Magenta: hsl(293, 100%, 63%);
+--Light-Violet: hsl(264, 100%, 61%);
+
+/* ### Secondary */
+
+--White: hsl(0, 0%, 100%);
+--Light-Grayish-Violet : hsl(270, 20%, 96%) ;/*(app background)*/
+--Very-Dark-Desaturated-Violet : hsl(271, 36%, 24%) ;/*(submit button background)*/
+--Very-Light-Magenta: hsl(289, 100%, 72%); /* (radio button outline)*/
+}
+html{
+    font-size: 16px;
+}
+body{
+    font-family: 'rubik', sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 6rem;
+    gap: 4rem;
+
+}
+.program{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: auto 20rem;
+    gap: 6rem;
+}
+.txt__p{
+    color: var(--Grayish-Blue);
+    width: 70%;
+    text-align: left;
+    font-size: 1rem;
+}
+.txt__h1{
+    color: var(--Very-Dark-Desaturated-Violet);
+}
+.Mobile_chat{
+    background-color: var(--Light-Grayish-Violet);
+    box-shadow: 9px 9px 5px 2px gray;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 800px;
+    height: fit-content;
+    /* padding: 2rem; */
+    padding: 15px;
+    border-radius: 1rem;
+    position: relative;
+    z-index: 999;
+    gap: 20px;
+    .Mobile_chat__top{
+        padding:40px 30px 20px;
+        background:linear-gradient(to left, var(--Light-Magenta),var(--Light-Violet));
+        border-radius: 1rem;
+    }
+    .notch{
+        width: 60%;
+        height: 30px;
+        background-color: var(--White);
+        border-radius: 1rem;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+.bg{
+    background: linear-gradient(to left, var(--Light-Magenta), var(--Light-Violet));
+    border-radius: 0% 0% 50% 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 80%;
+}
+.Mobile_chat__top_body__txt , .Mobile_chat__top_body__txt_right , .Mobile_Price_chat{
+    background-color: var(--Pale-Violet);
+    padding: 10px;
+    border-radius: 1rem;
+    font-size: .9rem;
+    color: var(--White);
+    width: 80%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.Mobile_chat__top_body__txt_right{
+    background-color: var(--White);
+    box-shadow: 0px 0px 3px 0px gray;
+    color: black;
+}
+.Mobile_chat__top_body__img img{
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+}
+.Mobile_Price_chat{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to left, var(--Light-Magenta), var(--Light-Violet));
+    padding: 15px;
+}
+.circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid var(--Grayish-Blue);
+}
+.comment{
+    width: 100%;
+    background-color: var(--White);
+    position: relative;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 15px;
+}
+.comment input{
+    width: 100%;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: black;
+}
+.comment i{
+    position: absolute;
+    right: 10px;
+    background-color: var(--Very-Dark-Desaturated-Violet);
+    padding: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: var(--White);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width : 767px) {
+    .program{
+        flex-direction: column;
+    }
+    .bg{
+        left: -171px;
+        width: 63%;
+        height: 80%;
+    }
+    .Mobile_chat{
+        width: 420px;
+    }
+    .txt__p{
+        text-align: center;
+        margin: auto;
+        width: 100%;
+    }
+}
+@media (min-width : 767px) and (max-width : 991px) {
+    .program{
+        flex-direction: column;
+    }
+    .bg{
+        left: -171px;
+        width: 63%;
+        height: 80%;
+    }
+    .Mobile_chat{
+        width: 420px;
+    }
+    .txt__p{
+        text-align: center;
+        margin: auto;
+        width: 100%;
+    }
+    
+}
